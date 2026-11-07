@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import Link from "next/link";
 import {
   detectSocialUrl,
   SAMPLE_TEST_LINKS,
@@ -1150,7 +1149,7 @@ export default function DafianDownloaderPage() {
 
       {/* MINIMAL DAFIAN FOOTER */}
       <footer className="border-t border-[var(--border-color)] py-6 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs text-[var(--text-muted)]">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center sm:justify-start gap-3 text-xs text-[var(--text-muted)]">
           <div className="flex items-center gap-3">
             <span className="font-display text-sm text-[var(--bronze)]">
               Dafian Downloader
@@ -1158,13 +1157,6 @@ export default function DafianDownloaderPage() {
             <span>•</span>
             <span>Instagram • TikTok • YouTube</span>
           </div>
-
-          <Link
-            href="/admin"
-            className="min-h-[44px] inline-flex items-center px-2 font-mono-tech text-[11px] text-[var(--text-secondary)] hover:text-[var(--bronze)] transition-colors"
-          >
-            Admin Panel
-          </Link>
         </div>
       </footer>
     </div>
