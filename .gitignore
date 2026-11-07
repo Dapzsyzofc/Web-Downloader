@@ -1,0 +1,65 @@
+# Dependencies
+/node_modules
+node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js & Production Build
+/.next/
+.next/
+/out/
+out/
+/build
+build/
+/dist
+dist/
+
+# Environment & Secrets (Rahasia Server)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+!.env.example
+
+# Platform & Deployment Folders
+.vercel
+.supabase
+
+# Internal Docs & Temporary Scratch Files
+prd.md
+product_requirements_document_prd.md
+update_sistem_prd.md
+DESIGN.md
+scratch/
+tmp/
+temp/
+
+# IDE & Agent Folders
+.vscode/
+.idea/
+.gemini/
+.agent/
+.agents/
+.claude/
+
+# Debug & Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# TypeScript & OS Misc
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+Thumbs.db
+*.pem
+

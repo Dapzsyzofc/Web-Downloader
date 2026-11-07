@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Goozeman";
+  src: url("/fonts/Goozeman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ShareTechMono";
+  src: url("/fonts/ShareTechMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Default: Dafian Portfolio Dark Liquid Metal & Warm Bronze Theme */
+  --bg-primary: #050505;
+  --bg-card: rgba(18, 17, 16, 0.88);
+  --bg-subtle: rgba(255, 255, 255, 0.045);
+  --bg-input: rgba(255, 255, 255, 0.055);
+  --text-primary: #f0f0f0;
+  --text-secondary: #a8a8a8;
+  --text-muted: #787470;
+  --border-color: rgba(255, 255, 255, 0.11);
+  --border-accent: rgba(196, 149, 106, 0.35);
+  --bronze: #c4956a;
+  --bronze-light: #d4a87a;
+  --bronze-bg: rgba(196, 149, 106, 0.14);
+  --card-shadow: 0 22px 55px -24px rgba(0, 0, 0, 0.78);
+  --pill-bg: rgba(12, 14, 22, 0.78);
+}
+
+html.light {
+  /* Clean Warm Ivory Light Mode (R-34 WCAG AA Verified) */
+  --bg-primary: #f6f3ee;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-subtle: #eee9e0;
+  --bg-input: #f2ede4;
+  --text-primary: #141312;
+  --text-secondary: #524d47;
+  --text-muted: #6e675f;
+  --border-color: rgba(20, 19, 18, 0.12);
+  --border-accent: rgba(140, 94, 53, 0.38);
+  --bronze: #8c5e35;
+  --bronze-light: #734a26;
+  --bronze-bg: rgba(140, 94, 53, 0.11);
+  --card-shadow: 0 18px 40px -20px rgba(20, 19, 18, 0.1);
+  --pill-bg: rgba(255, 255, 255, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: "Goozeman", var(--font-jakarta), sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-mono-tech {
+  font-family: "ShareTechMono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Ambient Dafian Portfolio Background */
+.dafian-ambient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse 90% 70% at 50% 25%,
+    rgba(196, 149, 106, 0.14) 0%,
+    transparent 70%
+  );
+}
+
+html.light .dafian-ambient-bg {
+  background: radial-gradient(
+    ellipse 90% 70% at 50% 20%,
+    rgba(196, 149, 106, 0.18) 0%,
+    transparent 70%
+  );
+}
+
+.dafian-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(14px);
+}
+
+.dafian-pill-nav {
+  background: var(--pill-bg);
+  border: 1px solid var(--border-accent);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15),
+    0 12px 32px -10px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+}
+
+.dafian-btn-primary {
+  background-color: var(--bronze);
+  color: #ffffff;
+  transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+}
+
+.dafian-btn-primary:hover:not(:disabled) {
+  opacity: 0.94;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -4px rgba(196, 149, 106, 0.45);
+}
+
+.dafian-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeSlide 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Keyboard Focus Accessibility (R-32) */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 2px;
+}

@@ -1,0 +1,18 @@
+services:
+  dafian-downloader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dafian-downloader
+    ports:
+      - "3000:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+      - FFMPEG_BIN=/usr/bin/ffmpeg
+    restart: unless-stopped
+

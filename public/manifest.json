@@ -1,0 +1,21 @@
+{
+  "name": "Dafian Downloader",
+  "short_name": "DafianDL",
+  "description": "Salin Komentar Instagram & Unduh Media HD dari Instagram, TikTok (Tanpa Watermark), dan YouTube (MP4 & MP3)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#C8431F",
+  "orientation": "portrait-primary",
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
+
